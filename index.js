@@ -16,15 +16,16 @@ const server = http.createServer(function(req, res) {
   */
 
   // Part 1 Code Here
-  res.writeHead(200, { "Content-Type": "text/html" });
+  if (req.url == "/") {
+    res.writeHead(200, { "Content-Type": "text/html" });
 
-  fs.readFile("./public/index.html", function(err, data) {
-    if (!err) {
-      res.write(data);
-      res.end();
-    }
-  });
-
+    fs.readFile("./public/index.html", function(err, data) {
+      if (!err) {
+        res.write(data);
+        res.end();
+      }
+    });
+  }
 
 
   // Begin Parts 2 to 4 AFTER your Node app is able to load the index.html file from part 1 above
