@@ -48,7 +48,14 @@
         */
 
         // Part 2 Code Here
-
+        $('#greetNodeBtn').click(function(){
+          $.get("https://cs157-module-4-lab-node-exercises.studywithrue.repl.co/hello", function(result, status) {
+            alert("this is the result: " + result);
+})
+.fail(function(err) { 
+   alert('Something went wrong');
+});
+        })
 
       </script>
     </div>

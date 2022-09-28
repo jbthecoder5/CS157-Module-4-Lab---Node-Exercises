@@ -26,6 +26,13 @@ const server = http.createServer(function(req, res) {
       }
     });
   }
+  else if (req.url == "/pokemon") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+
+    res.write("Pokemon gotta catch'em all baby!");
+
+    res.end();
+  }
 
 
   // Begin Parts 2 to 4 AFTER your Node app is able to load the index.html file from part 1 above
@@ -41,7 +48,13 @@ const server = http.createServer(function(req, res) {
   */
 
   // Part 2 Code Here
+  else if (req.url == "/hello") {
+    res.writeHead(200, { "Content-Type": "text/plain" });
 
+    res.write("Hello Client");
+
+    res.end();
+  }
 
 
 
