@@ -1,0 +1,23 @@
+{
+  "name": "CS157-Module-4-Lab-Node-Exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mckaythedev/CS157-Module-4-Lab---Node-Exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mckaythedev/CS157-Module-4-Lab---Node-Exercises/issues"
+  },
+  "homepage": "https://github.com/mckaythedev/CS157-Module-4-Lab---Node-Exercises#readme",
+  "dependencies": {
+    "quote_generator": "^1.1.0"
+  }
+}

@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const quote = require("./quotegen");
 
 const server = http.createServer(function(req, res) {
 
@@ -73,7 +74,13 @@ const server = http.createServer(function(req, res) {
   */
 
   // Part 3 Code Here
+  else if (req.url == "/quote") {
+    res.writeHead(200, { "Content-Type": "text/html" });
 
+    res.write(quote.getQuote());
+
+    res.end();
+  }
 
 
 
@@ -92,7 +99,22 @@ const server = http.createServer(function(req, res) {
   */
 
   // Part 4 Code Here
+  else if (req.url == "/address") {
+    res.writeHead(200, { "Content-Type": "application/json" });
 
+    let address = {
+      name: "james",
+      street: "ABC 123 Blvd",
+      city: "Los Angeles",
+      state: "CA",
+      zip: "90029"
+    };
+
+    res.write(JSON.stringify(address));
+
+    res.end();
+
+  }
 
 
 });
