@@ -87,11 +87,10 @@
 
         // Part 3 Code Here
         $.ajax({
-           url: "https://cs157-module-4-lab-node-exercises.studywithrue.repl.co/quote",
+           url: "/quote",
            type: "get",
-           data: d, // Data to be sent to the server (if any)
            success: function(result) {
-              alert(d);
+              $('#quoteBox').text(result);
            },
            error: function(result) {
               alert("something went wrong.");
