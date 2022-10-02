@@ -146,7 +146,15 @@
         */
 
         // Part 4 Code Here
-
+        $('#getAddressBtn').click(function(){
+          $.getJSON('/address', function(result){
+            $('#nameTxt').val(result.name);
+            $('#addressTxt').val(result.street);
+            $('#cityTxt').val(result.city);
+            $('#stateTxt').val(result.state);
+            $('#zipTxt').val(result.zip);
+          })
+        })
         
       </script>
     </div>
